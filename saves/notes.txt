@@ -1,0 +1,8 @@
+git add -A
+git commit -m "message"
+git push
+git tag 	-a v1.0.1 	-m "message"
+git push --tags
+
+
+https://app.pluralsight.com/library/courses/angular-routing/table-of-contents
