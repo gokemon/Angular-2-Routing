@@ -6,3 +6,9 @@ git push --tags
 
 
 https://app.pluralsight.com/library/courses/angular-routing/table-of-contents
+
+    "name": "product-management",
+    "version": "1.0.1",
+    "author": "Michael Gokey",
+    "description": "reactive forms for sample site",
+    "license": "MIT",
