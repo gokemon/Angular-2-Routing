@@ -12,6 +12,10 @@ var core_1 = require('@angular/core');
 var WelcomeComponent = (function () {
     function WelcomeComponent() {
         this.pageTitle = 'Welcome';
+        this.developedBy = 'Developed by:';
+        this.siteDeveloper = 'Michael Gokey';
+        this.siteDeveloperURL = 'http://portfolio.gokemon.xyz/';
+        this.developedHandle = '@gokemon';
     }
     WelcomeComponent = __decorate([
         core_1.Component({
@@ -22,4 +26,5 @@ var WelcomeComponent = (function () {
     return WelcomeComponent;
 }());
 exports.WelcomeComponent = WelcomeComponent;
+// @gokemon
 //# sourceMappingURL=welcome.component.js.map

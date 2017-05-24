@@ -36,6 +36,12 @@ as well as these modules
 
 - ***git status***
 - ***git push***
+
+	inbetween each branch & master merge push, before you jump into another branch, also tag that step
+
+- ***git tag 	-a v1.0.1 	-m "message"***
+- ***git push --tags***
+
 	
 
 ### Repeat as needed
