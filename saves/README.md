@@ -12,6 +12,38 @@ as well as these modules
 
 ----------
 
+## Gokemon's steps ##
+- ***git clone URL***
+- ***git checkout -b feature1***
+	
+	which moved me onto featured branch, is this also consided the "working tree"
+
+	Do some work
+
+- ***git add -A***
+- ***git commit -m "comment"***
+- ***git status***
+- ***git checkout master***
+	
+	moved me back onto master, 
+
+	getting ready to push to GitHub
+
+- ***git pull***
+- ***git merge feature1***
+	
+	merging my featured branch back into master
+
+- ***git status***
+- ***git push***
+	
+
+### Repeat as needed
+
+
+----------
+
+
 ### Description
 
 These are the starter files for the Angular Routing project

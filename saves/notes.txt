@@ -3,6 +3,10 @@ git commit -m "message"
 git push
 git tag 	-a v1.0.1 	-m "message"
 git push --tags
+then...
+git checkout -b feature1
+then do some work...
+and 
 
 
 https://app.pluralsight.com/library/courses/angular-routing/table-of-contents
