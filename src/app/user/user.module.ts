@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-
+/* imports Angular "core" library modules above and my stuff below */
 import { LoginComponent } from './login.component';
 import { AuthService } from './auth.service';
 
 import { SharedModule } from '../shared/shared.module';
 
+
+/* TypeDecorator */
 @NgModule({
   imports: [
     SharedModule
@@ -16,4 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     AuthService
   ]
 })
-export class UserModule { }
+/* Export class */
+export class UserModule { 
+  // code stub
+}

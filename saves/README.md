@@ -9,6 +9,31 @@ I plan to build out these components
 as well as these modules
 ![](https://github.com/gokemon/Angular-2-Routing/blob/master/saves/A2Rt-modules.PNG)
 
+# Setting up my Steps or Branches #
+1. Setup the Project
+1. Routing Basics
+1. Routing to Features
+1. Route Parameters
+1. Prefetching Data
+1. Child Routes
+1. Grouping
+1. Styling
+1. Secondary Routes
+1. Route Guards
+1. Lazy Loading
+
+    RoutingBasics
+    RoutingFeatures
+    RouteParameters
+    PrefetchingData
+    ChildRoutes
+    Grouping
+    Styling
+    SecondaryRoutes
+    RouteGuards
+    LazyLoading
+
+
 
 ----------
 

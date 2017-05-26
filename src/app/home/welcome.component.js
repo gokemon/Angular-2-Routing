@@ -9,6 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* imports Angular "core" library modules above and my stuff below */
+/* TypeDecorator */
 var WelcomeComponent = (function () {
     function WelcomeComponent() {
         this.pageTitle = 'Welcome';
@@ -25,6 +27,5 @@ var WelcomeComponent = (function () {
     ], WelcomeComponent);
     return WelcomeComponent;
 }());
-exports.WelcomeComponent = WelcomeComponent;
-// @gokemon
+exports.WelcomeComponent = WelcomeComponent; // I set this up so I could swap out i18n bundles later
 //# sourceMappingURL=welcome.component.js.map

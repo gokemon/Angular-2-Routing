@@ -10,10 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var message_service_1 = require('../messages/message.service');
+/* TypeDecorator */
 var AuthService = (function () {
     function AuthService(messageService) {
         this.messageService = messageService;
     }
+    /* Methods (login, logout and isLoggedIn) below */
     AuthService.prototype.isLoggedIn = function () {
         return !!this.currentUser;
     };

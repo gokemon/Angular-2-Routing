@@ -9,8 +9,71 @@ I plan to build out these components
 as well as these modules
 ![](https://github.com/gokemon/Angular-2-Routing/blob/master/saves/A2Rt-modules.PNG)
 
+# Setting up my Steps or Branches #
+1. Setup the Project
+1. Routing Basics
+1. Routing to Features
+1. Route Parameters
+1. Prefetching Data
+1. Child Routes
+1. Grouping
+1. Styling
+1. Secondary Routes
+1. Route Guards
+1. Lazy Loading
+
+    RoutingBasics
+    RoutingFeatures
+    RouteParameters
+    PrefetchingData
+    ChildRoutes
+    Grouping
+    Styling
+    SecondaryRoutes
+    RouteGuards
+    LazyLoading
+
+
 
 ----------
+
+## Gokemon's steps ##
+- ***git clone URL***
+- ***git checkout -b feature1***
+	
+	which moved me onto featured branch, is this also consided the "working tree"
+
+	Do some work
+
+- ***git add -A***
+- ***git commit -m "comment"***
+- ***git status***
+- ***git checkout master***
+	
+	moved me back onto master, 
+
+	getting ready to push to GitHub
+
+- ***git pull***
+- ***git merge feature1***
+	
+	merging my featured branch back into master
+
+- ***git status***
+- ***git push***
+
+	inbetween each branch & master merge push, before you jump into another branch, also tag that step
+
+- ***git tag 	-a v1.0.1 	-m "message"***
+- ***git push --tags***
+
+	
+
+### Repeat as needed
+
+
+----------
+
 
 ### Description
 

@@ -9,9 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* imports Angular "core" library modules above and my stuff below */
 var login_component_1 = require('./login.component');
 var auth_service_1 = require('./auth.service');
 var shared_module_1 = require('../shared/shared.module');
+/* TypeDecorator */
 var UserModule = (function () {
     function UserModule() {
     }

@@ -9,12 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* imports Angular "core" library modules above and my stuff below */
 var product_list_component_1 = require('./product-list.component');
 var product_detail_component_1 = require('./product-detail.component');
 var product_edit_component_1 = require('./product-edit.component');
 var product_filter_pipe_1 = require('./product-filter.pipe');
 var product_service_1 = require('./product.service');
 var shared_module_1 = require('../shared/shared.module');
+/* TypeDecorator */
 var ProductModule = (function () {
     function ProductModule() {
     }

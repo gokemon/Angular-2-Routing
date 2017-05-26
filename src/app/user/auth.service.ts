@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
-
+/* imports Angular "core" library modules above and my stuff below */
 import { IUser } from './user';
 import { MessageService } from '../messages/message.service';
 
+
+/* TypeDecorator */
 @Injectable()
+/* Export class */
 export class AuthService {
     currentUser: IUser;
 
     constructor(private messageService: MessageService) { }
 
+    /* Methods (login, logout and isLoggedIn) below */
     isLoggedIn(): boolean {
         return !!this.currentUser;
     }

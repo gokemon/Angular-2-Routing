@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+/* imports Angular "core" library modules above and my stuff below */
 
+/* Feature Modules */
 import { AuthService } from './auth.service';
 
+/* TypeDecorator */
 @Component({
     templateUrl: './app/user/login.component.html'
 })
+/* Export class */
 export class LoginComponent {
     errorMessage: string;
-    pageTitle = 'Log In';
+    pageTitle: string = 'Log In';
+    userName: string =  'User Name';
 
     constructor(private authService: AuthService) { }
 

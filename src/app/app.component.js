@@ -9,7 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* Imports Angular "core" library modules above and my stuff below */
 var auth_service_1 = require('./user/auth.service');
+/* TypeDecorator */
 var AppComponent = (function () {
     function AppComponent(authService) {
         this.authService = authService;
@@ -21,6 +23,7 @@ var AppComponent = (function () {
     };
     AppComponent = __decorate([
         core_1.Component({
+            /* properties */
             selector: 'pm-app',
             templateUrl: './app/app.component.html'
         }), 

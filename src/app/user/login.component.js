@@ -9,11 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* imports Angular "core" library modules above and my stuff below */
+/* Feature Modules */
 var auth_service_1 = require('./auth.service');
+/* TypeDecorator */
 var LoginComponent = (function () {
     function LoginComponent(authService) {
         this.authService = authService;
         this.pageTitle = 'Log In';
+        this.userName = 'User Name';
     }
     LoginComponent.prototype.login = function (loginForm) {
         if (loginForm && loginForm.valid) {
