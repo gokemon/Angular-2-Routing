@@ -9,27 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 /* Imports Angular "core" library modules above and my stuff below */
 var auth_service_1 = require('./user/auth.service');
 /* TypeDecorator */
 var AppComponent = (function () {
-    function AppComponent(authService) {
+    function AppComponent(authService, router) {
         this.authService = authService;
-        this.pageTitle = 'Acme Product Management';
+        this.router = router;
+        this.pageTitle = 'Acer Products';
     }
     AppComponent.prototype.logOut = function () {
         this.authService.logout();
         console.log('Log out');
+        this.router.navigateByUrl('/welcome');
     };
     AppComponent = __decorate([
         core_1.Component({
             /* properties */
+            // no selector
             selector: 'pm-app',
             templateUrl: './app/app.component.html'
         }), 
-        __metadata('design:paramtypes', [auth_service_1.AuthService])
+        __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.AppComponent = AppComponent; //    selector: 'pm-app',
 //# sourceMappingURL=app.component.js.map

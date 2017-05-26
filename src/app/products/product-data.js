@@ -1,4 +1,5 @@
 "use strict";
+/* Export class, no TypeDecorator */
 var ProductData = (function () {
     function ProductData() {
     }

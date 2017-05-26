@@ -10,12 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+/* imports Angular "core" library modules above and my stuff below */
 var message_service_1 = require('../messages/message.service');
+/* TypeDecorator */
 var MessageComponent = (function () {
     function MessageComponent(messageService, router) {
         this.messageService = messageService;
         this.router = router;
     }
+    /* methods */
     MessageComponent.prototype.close = function () {
         // Close the popup.
     };

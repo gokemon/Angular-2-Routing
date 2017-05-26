@@ -9,9 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* imports Angular "core" library modules above and my stuff below */
 var shared_module_1 = require('../shared/shared.module');
 var message_component_1 = require('./message.component');
 var message_service_1 = require('./message.service');
+/* TypeDecorator */
 var MessageModule = (function () {
     function MessageModule() {
     }

@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+/* TypeDecorator */
 var MessageService = (function () {
     function MessageService() {
         this.messages = [];
@@ -23,5 +24,5 @@ var MessageService = (function () {
     ], MessageService);
     return MessageService;
 }());
-exports.MessageService = MessageService;
+exports.MessageService = MessageService; // message service
 //# sourceMappingURL=message.service.js.map

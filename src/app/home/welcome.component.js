@@ -21,6 +21,7 @@ var WelcomeComponent = (function () {
     }
     WelcomeComponent = __decorate([
         core_1.Component({
+            /* Properties */
             templateUrl: './app/home/welcome.component.html'
         }), 
         __metadata('design:paramtypes', [])

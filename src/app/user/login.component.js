@@ -9,32 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 /* imports Angular "core" library modules above and my stuff below */
 /* Feature Modules */
 var auth_service_1 = require('./auth.service');
 /* TypeDecorator */
 var LoginComponent = (function () {
-    function LoginComponent(authService) {
+    function LoginComponent(authService, router) {
         this.authService = authService;
+        this.router = router;
         this.pageTitle = 'Log In';
         this.userName = 'User Name';
     }
+    /* login method */
     LoginComponent.prototype.login = function (loginForm) {
         if (loginForm && loginForm.valid) {
             var userName = loginForm.form.value.userName;
             var password = loginForm.form.value.password;
             this.authService.login(userName, password);
+            // Navigate to the Product List page after log in.
+            this.router.navigateByUrl('/products');
         }
         else {
             this.errorMessage = 'Please enter a user name and password.';
         }
         ;
-    };
+    }; // login method
     LoginComponent = __decorate([
         core_1.Component({
             templateUrl: './app/user/login.component.html'
         }), 
-        __metadata('design:paramtypes', [auth_service_1.AuthService])
+        __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router])
     ], LoginComponent);
     return LoginComponent;
 }());

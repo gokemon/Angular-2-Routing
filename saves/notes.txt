@@ -5,6 +5,7 @@ git checkout -b feature1
 git add -A
 git commit -m "message"
 git push
+	which changes your upstream, copy it over,
 	which pushed to the feature1 branch
 
 git checkout master
@@ -21,10 +22,19 @@ git status
 git push
 	pushes master
 
-git tag 	-a v1.2.1 	-m "message"
+git tag 	-a v1.2.1 	-m "step-tag message"
 git push --tags
 
-
+========================================
+m3-RoutingFeatures 
+m4-RouteParameters 
+m5-PrefetchingData 
+m6-ChildRoutes 
+m7-Grouping 
+m8-Styling 
+m9-SecondaryRoutes 
+m10-RouteGuards 
+m11-LazyLoading
 
 
 Acer Product Management

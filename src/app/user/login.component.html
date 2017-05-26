@@ -9,7 +9,7 @@
                 <div class="form-group" [ngClass]="{'has-error': (userNameVar.touched || 
                                                userNameVar.dirty) && 
                                                !userNameVar.valid }">
-                    <label class="col-md-2 control-label" for="userNameId">{{userName}}</label>
+                    <label class="col-md-2 control-label" for="userNameId">User Name</label>
 
                     <div class="col-md-8">
                         <input class="form-control" id="userNameId" type="text" placeholder="User Name (required)" required (ngModel)="userName" name="userName" #userNameVar="ngModel" />
@@ -51,15 +51,16 @@
                             </button>
                         </span>
                         <span>
-                            <a class="btn btn-default">
+                            <a  class="btn btn-default"
+                                [routerLink]="['/welcome']">
                                 Cancel
                             </a>
                         </span>
                     </div>
                 </div>
+                <!-- form-group -->
             </fieldset>
         </form>
         <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
     </div>
-
 </div>
