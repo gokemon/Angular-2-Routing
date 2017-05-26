@@ -1,12 +1,29 @@
+
+git checkout -b feature1
+	then do some work...
+	
 git add -A
 git commit -m "message"
 git push
-git tag 	-a v1.0.1 	-m "message"
+	which pushed to the feature1 branch
+
+git checkout master
+	moved me back onto master,
+	getting ready to push to GitHub
+	
+git pull
+git merge feature1
+	merging my featured branch back into master
+
+git status
+	which tell you everything is ok and ready
+
+git push
+	pushes master
+
+git tag 	-a v1.2.1 	-m "message"
 git push --tags
-	then...
-git checkout -b feature1
-	then do some work...
-	and 
+
 
 
 

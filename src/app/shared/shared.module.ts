@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { StarComponent } from './star.component';
 
+/* TypeDecorator */
 @NgModule({
   imports: [ CommonModule],
   exports : [
@@ -13,4 +14,5 @@ import { StarComponent } from './star.component';
   ],
   declarations: [ StarComponent ],
 })
+
 export class SharedModule { }

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+/* imports Angular "core" library modules above and my stuff below */
 import { MessageService } from '../messages/message.service';
 
+/* TypeDecorator */
 @Component({
     template: `
         <div class="row">
@@ -24,11 +25,12 @@ import { MessageService } from '../messages/message.service';
         '.message-row { margin-bottom: 10px }'
     ]
 })
+/* Export class */
 export class MessageComponent {
 
     constructor(private messageService: MessageService,
                 private router: Router) { }
-
+    /* methods */
     close(): void {
         // Close the popup.
     }

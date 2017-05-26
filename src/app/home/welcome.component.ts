@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 
 /* TypeDecorator */
 @Component({
+    /* Properties */
     templateUrl: './app/home/welcome.component.html'
 })
 /* Export class */
