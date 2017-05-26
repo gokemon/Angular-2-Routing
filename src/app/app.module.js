@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
-var router_1 = require('@angular/router');
+// import { RouterModule } from '@angular/router'; /* moved routing to its own module */
 /* imports Angular "core" library modules above and my stuff below */
 /* Imports for loading & configuring the in-memory web api */
 var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
 var product_data_1 = require('./products/product-data');
+var app_routing_module_1 = require('./app-routing.module');
 var app_component_1 = require('./app.component');
 var welcome_component_1 = require('./home/welcome.component');
 var page_not_found_component_1 = require('./page-not-found.component');
@@ -33,15 +34,11 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(product_data_1.ProductData, { delay: 1000 }),
-                // inMemory simulates calls to a back-end web service for data
-                router_1.RouterModule.forRoot([
-                    { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-                    { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
-                ]),
+                // inMemory simulates calls to a back-end web service for data    
                 product_module_1.ProductModule,
                 user_module_1.UserModule,
-                message_module_1.MessageModule /* Feature Modules */
+                message_module_1.MessageModule,
+                app_routing_module_1.AppRoutingModule /* moved routing to its own module */
             ],
             declarations: [
                 app_component_1.AppComponent,

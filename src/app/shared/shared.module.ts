@@ -7,14 +7,16 @@ import { StarComponent } from './star.component';
 
 /* TypeDecorator */
 @NgModule({
-  imports: [ CommonModule],
+  imports: [ 
+    CommonModule
+  ], // end imports
   exports : [
     CommonModule,
     FormsModule,
     StarComponent
-  ],
+  ], // end exports
   declarations: [ StarComponent ],
-})
+}) // end declarations
 /* Export class */
 export class SharedModule { 
   // code stub

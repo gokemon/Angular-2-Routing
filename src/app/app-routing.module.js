@@ -9,29 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var forms_1 = require('@angular/forms');
-/* imports Angular "core" library modules above and my stuff below */
-var star_component_1 = require('./star.component');
+var router_1 = require('@angular/router');
+/* Imports Angular "core" library modules above and my stuff below */
+var welcome_component_1 = require('./home/welcome.component');
+var page_not_found_component_1 = require('./page-not-found.component');
+var ROUTES = [
+    { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+    { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
+];
 /* TypeDecorator */
-var SharedModule = (function () {
-    function SharedModule() {
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
     }
-    SharedModule = __decorate([
+    AppRoutingModule = __decorate([
         core_1.NgModule({
             imports: [
-                common_1.CommonModule
+                router_1.RouterModule.forRoot(ROUTES),
             ],
             exports: [
-                common_1.CommonModule,
-                forms_1.FormsModule,
-                star_component_1.StarComponent
+                router_1.RouterModule
             ],
-            declarations: [star_component_1.StarComponent],
         }), 
         __metadata('design:paramtypes', [])
-    ], SharedModule);
-    return SharedModule;
+    ], AppRoutingModule);
+    return AppRoutingModule;
 }());
-exports.SharedModule = SharedModule;
-//# sourceMappingURL=shared.module.js.map
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map
