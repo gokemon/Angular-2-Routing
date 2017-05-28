@@ -56,7 +56,7 @@ Acer Product Management
         </div>
 ======================================== 
 M4 branch messages
-Configured the parameters and routing to ProductDetail and ProductEdit routes
+Configured passing and reading parameters to ProductDetail and ProductEdit routes
 Set Product List route to retain its filter by and image display settings as query parameters
 
 ======================================== 

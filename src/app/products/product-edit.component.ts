@@ -1,22 +1,32 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+/* imports Angular "core" library modules above and my stuff below */
 import { MessageService } from '../messages/message.service';
 
 import { IProduct } from './product';
 import { ProductService } from './product.service';
 
+
+/* TypeDecorator */
 @Component({
     templateUrl: './app/products/product-edit.component.html',
     styleUrls: ['./app/products/product-edit.component.css']
 })
-export class ProductEditComponent {
+/* Export class */
+export class ProductEditComponent implements OnInit {
     pageTitle: string = 'Product Edit';
     errorMessage: string;
 
     product: IProduct;
 
     constructor(private productService: ProductService,
-                private messageService: MessageService) { }
+                private messageService: MessageService,
+                private route: ActivatedRoute) { }
+
+    ngOnInit(): void {
+        let id = +this.route.snapshot.params['id'];
+        this.getProduct(id);
+    } //ngOnInit                
 
     getProduct(id: number): void {
         this.productService.getProduct(id)

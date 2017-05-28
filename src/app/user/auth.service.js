@@ -10,6 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var message_service_1 = require('../messages/message.service');
+/* I think this is part of the "connection- pipeworks" that
+** connects down to the application and or API,
+** OAuth and they type of thing */
 /* TypeDecorator */
 var AuthService = (function () {
     function AuthService(messageService) {

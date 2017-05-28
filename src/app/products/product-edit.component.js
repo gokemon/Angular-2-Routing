@@ -9,14 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+/* imports Angular "core" library modules above and my stuff below */
 var message_service_1 = require('../messages/message.service');
 var product_service_1 = require('./product.service');
+/* TypeDecorator */
 var ProductEditComponent = (function () {
-    function ProductEditComponent(productService, messageService) {
+    function ProductEditComponent(productService, messageService, route) {
         this.productService = productService;
         this.messageService = messageService;
+        this.route = route;
         this.pageTitle = 'Product Edit';
     }
+    ProductEditComponent.prototype.ngOnInit = function () {
+        var id = +this.route.snapshot.params['id'];
+        this.getProduct(id);
+    }; //ngOnInit                
     ProductEditComponent.prototype.getProduct = function (id) {
         var _this = this;
         this.productService.getProduct(id)
@@ -65,7 +73,7 @@ var ProductEditComponent = (function () {
             templateUrl: './app/products/product-edit.component.html',
             styleUrls: ['./app/products/product-edit.component.css']
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, message_service_1.MessageService])
+        __metadata('design:paramtypes', [product_service_1.ProductService, message_service_1.MessageService, router_1.ActivatedRoute])
     ], ProductEditComponent);
     return ProductEditComponent;
 }());
