@@ -9,6 +9,13 @@ I plan to build out these components
 as well as these modules
 ![](https://github.com/gokemon/Angular-2-Routing/blob/master/saves/A2Rt-modules.PNG)
 
+----------
+
+
+### Description
+
+These are the starter files for the Angular Routing project
+
 # Setting up my Steps or Branches #
 1. Setup the Project
 1. Routing Basics
@@ -72,12 +79,17 @@ as well as these modules
 ### Repeat as needed
 
 
-----------
 
 
-### Description
 
-These are the starter files for the Angular Routing project
+## Feature Branch ~ M4 Route Parameters ##
+- In this module, 
+- I work on required parameters. 
+- Then how to configure a route with required parameters. 
+- As well as how to populate the required parameters, and how to read the parameters from the route. 
+- Then I work on optional parameters and query parameters. 
+- By the end of this feature branch, I'll have configured the parameters and routed to the Product Detail and Product Edit routes. 
+- And set the Product List route to retain its filter by and image display settings as query parameters.
 
 ### Installation
 

@@ -3,13 +3,16 @@
         {{pageTitle}}
     </div>
 
+
+    <!--I'm gonna try to replace all the words on this page with {{strings}}'-->
     <div class="panel-body">
         <form class="form-horizontal" novalidate (ngSubmit)="login(loginForm)" #loginForm="ngForm" autocomplete="off">
             <fieldset>
                 <div class="form-group" [ngClass]="{'has-error': (userNameVar.touched || 
                                                userNameVar.dirty) && 
                                                !userNameVar.valid }">
-                    <label class="col-md-2 control-label" for="userNameId">User Name</label>
+                    <label class="col-md-2 control-label" for="userNameId">
+                        User Name</label>
 
                     <div class="col-md-8">
                         <input class="form-control" id="userNameId" type="text" placeholder="User Name (required)" required (ngModel)="userName" name="userName" #userNameVar="ngModel" />
@@ -26,7 +29,8 @@
                 <div class="form-group" [ngClass]="{'has-error': (passwordVar.touched || 
                                                passwordVar.dirty) && 
                                                !passwordVar.valid }">
-                    <label class="col-md-2 control-label" for="passwordId">Password</label>
+                    <label class="col-md-2 control-label" for="passwordId">
+                        Password</label>
 
                     <div class="col-md-8">
                         <input class="form-control" id="passwordId" type="password" placeholder="Password (required)" required (ngModel)="password" name="password" #passwordVar="ngModel" />

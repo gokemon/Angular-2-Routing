@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { IUser } from './user';
 import { MessageService } from '../messages/message.service';
 
+/* I think this is part of the "connection- pipeworks" that
+** connects down to the application and or API, 
+** OAuth and they type of thing */
 
 /* TypeDecorator */
 @Injectable()
