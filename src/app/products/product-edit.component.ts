@@ -1,10 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 /* imports Angular "core" library modules above and my stuff below */
 import { MessageService } from '../messages/message.service';
-
 import { IProduct } from './product';
 import { ProductService } from './product.service';
+
+
+/* 
+    Michael's notes, some how I am missing the ID and data,
+    looks like I should learn to write some tests so that each button has a test.
+    and is properly wired to something
+*/
+
 
 
 /* TypeDecorator */
@@ -21,11 +28,18 @@ export class ProductEditComponent implements OnInit {
 
     constructor(private productService: ProductService,
                 private messageService: MessageService,
-                private route: ActivatedRoute) { }
+                private route: ActivatedRoute,
+                private router: Router) { }
 
     ngOnInit(): void {
-        let id = +this.route.snapshot.params['id'];
-        this.getProduct(id);
+        // let id = +this.route.snapshot.params['id'];
+        // this.getProduct(id);
+        this.route.params.subscribe(
+            params => {
+                let id = +params['id'];
+                this.getProduct(id);
+            }
+        )
     } //ngOnInit                
 
     getProduct(id: number): void {
@@ -78,6 +92,7 @@ export class ProductEditComponent implements OnInit {
             this.messageService.addMessage(message);
         }
 
-        // Navigate back to the product list
+        // navigate back to the product list
+        this.router.navigate(['/products']);
     }
 }

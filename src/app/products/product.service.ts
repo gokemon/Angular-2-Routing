@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-
+/* imports Angular "core" library modules above and my stuff below */
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
@@ -10,12 +10,14 @@ import 'rxjs/add/observable/of';
 
 import { IProduct } from './product';
 
+
 @Injectable()
 export class ProductService {
     private baseUrl = 'api/products';
 
     constructor(private http: Http) { }
 
+    /* Methods */
     getProducts(): Observable<IProduct[]> {
         return this.http.get(this.baseUrl)
             .map(this.extractData)
@@ -23,16 +25,19 @@ export class ProductService {
             .catch(this.handleError);
     }
 
+
+    // getProduct method
     getProduct(id: number): Observable<IProduct> {
         if (id === 0) {
             return Observable.of(this.initializeProduct());
-        };
+        }; // if you use a 0 as ID, then initializeProduct
         const url = `${this.baseUrl}/${id}`;
         return this.http.get(url)
             .map(this.extractData)
             .do(data => console.log('getProduct: ' + JSON.stringify(data)))
             .catch(this.handleError);
-    }
+    } // otherwise, it uses HTTP and gets the product data from the "back-end" server
+
 
     deleteProduct(id: number): Observable<Response> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
@@ -44,6 +49,7 @@ export class ProductService {
             .catch(this.handleError);
     }
 
+
     saveProduct(product: IProduct): Observable<IProduct> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
@@ -54,6 +60,7 @@ export class ProductService {
         return this.updateProduct(product, options);
     }
 
+    
     private createProduct(product: IProduct, options: RequestOptions): Observable<IProduct> {
         product.id = undefined;
         return this.http.post(this.baseUrl, product, options)
@@ -82,6 +89,7 @@ export class ProductService {
         return Observable.throw(error.json().error || 'Server error');
     }
 
+    // initializeProduct method called with ID is 0
     initializeProduct(): IProduct {
         // Return an initialized object
         return {
@@ -95,6 +103,6 @@ export class ProductService {
             description: null,
             starRating: null,
             imageUrl: null
-        };
-    }
-}
+        }; // data array
+    } // initializeProduct
+}//end of injectable ProductService class

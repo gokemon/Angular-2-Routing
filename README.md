@@ -21,6 +21,7 @@ These are the starter files for the Angular Routing project
 1. Routing Basics
 1. Routing to Features
 1. Route Parameters
+	1. currently stuck in the Reading Route Parameters section
 1. Prefetching Data
 1. Child Routes
 1. Grouping
@@ -90,6 +91,12 @@ These are the starter files for the Angular Routing project
 - Then I work on optional parameters and query parameters. 
 - By the end of this feature branch, I'll have configured the parameters and routed to the Product Detail and Product Edit routes. 
 - And set the Product List route to retain its filter by and image display settings as query parameters.
+
+***Reading Route Parameters, still working on the reading, while on the edit page. The delete works, the save and add new does not.
+I need to learn to write code tests that cover the buttons.***
+
+----------
+
 
 ### Installation
 

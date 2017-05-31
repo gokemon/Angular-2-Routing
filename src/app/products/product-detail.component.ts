@@ -8,6 +8,7 @@ import { ProductService } from './product.service';
 /* TypeDecorator */
 @Component({
     templateUrl: './app/products/product-detail.component.html'
+    // no other css or test decorator properties 
 })
 /* Export class */
 export class ProductDetailComponent implements OnInit {

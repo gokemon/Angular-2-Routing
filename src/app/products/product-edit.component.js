@@ -13,17 +13,28 @@ var router_1 = require('@angular/router');
 /* imports Angular "core" library modules above and my stuff below */
 var message_service_1 = require('../messages/message.service');
 var product_service_1 = require('./product.service');
+/*
+    Michael's notes, some how I am missing the ID and data,
+    looks like I should learn to write some tests so that each button has a test.
+    and is properly wired to something
+*/
 /* TypeDecorator */
 var ProductEditComponent = (function () {
-    function ProductEditComponent(productService, messageService, route) {
+    function ProductEditComponent(productService, messageService, route, router) {
         this.productService = productService;
         this.messageService = messageService;
         this.route = route;
+        this.router = router;
         this.pageTitle = 'Product Edit';
     }
     ProductEditComponent.prototype.ngOnInit = function () {
-        var id = +this.route.snapshot.params['id'];
-        this.getProduct(id);
+        var _this = this;
+        // let id = +this.route.snapshot.params['id'];
+        // this.getProduct(id);
+        this.route.params.subscribe(function (params) {
+            var id = +params['id'];
+            _this.getProduct(id);
+        });
     }; //ngOnInit                
     ProductEditComponent.prototype.getProduct = function (id) {
         var _this = this;
@@ -66,14 +77,15 @@ var ProductEditComponent = (function () {
         if (message) {
             this.messageService.addMessage(message);
         }
-        // Navigate back to the product list
+        // navigate back to the product list
+        this.router.navigate(['/products']);
     };
     ProductEditComponent = __decorate([
         core_1.Component({
             templateUrl: './app/products/product-edit.component.html',
             styleUrls: ['./app/products/product-edit.component.css']
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, message_service_1.MessageService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [product_service_1.ProductService, message_service_1.MessageService, router_1.ActivatedRoute, router_1.Router])
     ], ProductEditComponent);
     return ProductEditComponent;
 }());

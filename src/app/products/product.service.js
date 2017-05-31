@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+/* imports Angular "core" library modules above and my stuff below */
 var Observable_1 = require('rxjs/Observable');
 require('rxjs/add/operator/do');
 require('rxjs/add/operator/catch');
@@ -21,23 +22,25 @@ var ProductService = (function () {
         this.http = http;
         this.baseUrl = 'api/products';
     }
+    /* Methods */
     ProductService.prototype.getProducts = function () {
         return this.http.get(this.baseUrl)
             .map(this.extractData)
             .do(function (data) { return console.log('getProducts: ' + JSON.stringify(data)); })
             .catch(this.handleError);
     };
+    // getProduct method
     ProductService.prototype.getProduct = function (id) {
         if (id === 0) {
             return Observable_1.Observable.of(this.initializeProduct());
         }
-        ;
+        ; // if you use a 0 as ID, then initializeProduct
         var url = this.baseUrl + "/" + id;
         return this.http.get(url)
             .map(this.extractData)
             .do(function (data) { return console.log('getProduct: ' + JSON.stringify(data)); })
             .catch(this.handleError);
-    };
+    }; // otherwise, it uses HTTP and gets the product data from the "back-end" server
     ProductService.prototype.deleteProduct = function (id) {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
@@ -78,6 +81,7 @@ var ProductService = (function () {
         console.error(error);
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
+    // initializeProduct method called with ID is 0
     ProductService.prototype.initializeProduct = function () {
         // Return an initialized object
         return {
@@ -91,13 +95,13 @@ var ProductService = (function () {
             description: null,
             starRating: null,
             imageUrl: null
-        };
-    };
+        }; // data array
+    }; // initializeProduct
     ProductService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
     ], ProductService);
     return ProductService;
 }());
-exports.ProductService = ProductService;
+exports.ProductService = ProductService; //end of injectable ProductService class
 //# sourceMappingURL=product.service.js.map
