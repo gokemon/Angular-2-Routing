@@ -18,6 +18,7 @@ var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
 var product_data_1 = require('./products/product-data');
 var app_routing_module_1 = require('./app-routing.module');
 var app_component_1 = require('./app.component');
+var about_component_1 = require('./home/about.component');
 var welcome_component_1 = require('./home/welcome.component');
 var page_not_found_component_1 = require('./page-not-found.component');
 /* Feature Modules */
@@ -42,6 +43,7 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                about_component_1.AboutComponent,
                 welcome_component_1.WelcomeComponent,
                 page_not_found_component_1.PageNotFoundComponent
             ],

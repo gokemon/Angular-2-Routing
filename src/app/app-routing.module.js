@@ -11,10 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 /* Imports Angular "core" library modules above and my stuff below */
+var about_component_1 = require('./home/about.component');
 var welcome_component_1 = require('./home/welcome.component');
 var page_not_found_component_1 = require('./page-not-found.component');
 var ROUTES = [
     { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+    { path: 'about', component: about_component_1.AboutComponent },
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
 ];

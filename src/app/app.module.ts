@@ -10,6 +10,7 @@ import { ProductData } from './products/product-data';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AboutComponent } from './home/about.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 
@@ -33,6 +34,7 @@ import { MessageModule } from './messages/message.module';
   ], // end imports
   declarations: [
     AppComponent,
+    AboutComponent,
     WelcomeComponent,
     PageNotFoundComponent
   ],
