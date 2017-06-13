@@ -22,7 +22,8 @@ var AboutComponent = (function () {
     AboutComponent = __decorate([
         core_1.Component({
             /* Properties */
-            templateUrl: './app/home/about.component.html'
+            templateUrl: './app/home/about.component.html',
+            styleUrls: ['./app/home/about.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);

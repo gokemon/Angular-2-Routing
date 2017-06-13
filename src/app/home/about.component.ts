@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
 /* TypeDecorator */
 @Component({
     /* Properties */
-    templateUrl: './app/home/about.component.html'
+    templateUrl: './app/home/about.component.html',
+    styleUrls: ['./app/home/about.component.css']
 })
 /* Export class */
 export class AboutComponent {
